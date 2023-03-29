@@ -692,7 +692,7 @@ void Widget::startRequest(const QUrl &requestedUrl)
 void Widget::downloadFile()
 {
     //JSON文件存放网址
-    QUrl newUrl("https://github.com/CN-Scars/PeaceToolkit-JSON/releases/download/JSON/PeaceToolkit_update.json");
+    QUrl newUrl("https://github.com/CN-Scars/JSON-Repository/releases/download/PeaceToolkit_JSON/PeaceToolkit_update.json");
     if(!newUrl.isValid())      //检测JSON文件地址是否失效
     {
         QMessageBox::information(this, tr("错误！"),
