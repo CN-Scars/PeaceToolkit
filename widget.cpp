@@ -748,7 +748,7 @@ void Widget::httpFinished()
            if(!httpRequestAborted)
            {
                QMessageBox::information(this, tr("错误"),
-                                        tr("JSON文件下载失败：").arg(errorString));
+                                        tr("JSON文件下载失败，错误信息：").arg(errorString));
            }
            return;
        }
@@ -786,7 +786,7 @@ void Widget::sslErrors(const QList<QSslError> &errors)
     }
 
     if (QMessageBox::warning(this, tr("SSL Errors"),
-                             tr("发生了一个或多个 SSL 错误:\n%1").arg(errorString),
+                             tr("发生了一个或多个 SSL 错误信息:\n%1").arg(errorString),
                              QMessageBox::Ignore | QMessageBox::Abort) == QMessageBox::Ignore) {
         reply->ignoreSslErrors();
     }
